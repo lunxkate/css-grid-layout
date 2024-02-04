@@ -16,6 +16,10 @@ nav {
   background-color: white;
 }
 
+img {
+  width: 100%;
+}
+
 .outer-grid {
   display: grid;
   height: 100vh;
@@ -52,17 +56,51 @@ nav {
 
 main {
   grid-area: 1 / 1 / 2 / 3;
-  height: 2000px;
+}
+
+article,
+#sidebar {
+  margin: 20px;
+}
+
+h1,
+h3,
+p,
+img {
+  padding: 10px;
 }
 
 aside {
   grid-area: 2 / 1 / 3 / 3;
-  border-left: 1px solid black;
+  padding-top: 40px;
+}
+
+.sidebar-link {
+  display: flex;
+}
+
+.sidebar-link h4 {
+  padding: 10px;
+}
+
+.sidebar-number {
+  margin: 10px;
+  font-size: 1.8rem;
+  width: 20px;
+  flex-shrink: 0;
 }
 
 footer {
   background-color: black;
   grid-area: 3 / 1 / 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: white;
+  height: fit-content;
 }
 
 header {
@@ -145,6 +183,8 @@ nav {
 
   aside {
     grid-area: 1 / 2 / 2 / 3;
+    border-left: 1px solid black;
+    padding-top: 5px;
   }
 
   footer {
@@ -173,12 +213,17 @@ nav {
   }
 
   nav {
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   #menu {
     float: right;
     width: 100px;
     margin-right: 15px;
+  }
+
+  #sidebar {
+    float: left;
+    width: 360px;
   }
 }
